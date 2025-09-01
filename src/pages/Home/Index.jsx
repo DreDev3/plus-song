@@ -21,7 +21,7 @@ export default function Home() {
         <div class="partion"></div>
         <section class="sugestions">
           <div class="dev-box">
-            <h3><img src="./André.png" alt="André" /></h3>
+            <h3><img src={`${import.meta.env.BASE_URL}André.png`} alt="André" /></h3>
             <div class="list">
               <h4>Sugestões do André</h4>
               <ol>
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
           <div class="dev-box">
-            <h3><img src="./Fabio.png" alt="Fabio" /></h3>
+            <h3><img src={`${import.meta.env.BASE_URL}Fabio.png`} alt="Fabio" /></h3>
             <div class="list">
               <h4>Sugestões do Fabio</h4>
               <ol>
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
 
           <div class="dev-box">
-            <h3><img src="./Lupe.png" alt="Lupe" /></h3>
+            <h3><img src={`${import.meta.env.BASE_URL}Lupe.png`} alt="Lupe" /></h3>
             <div class="list">
               <h4>Sugestões da Lupe</h4>
               <ol>

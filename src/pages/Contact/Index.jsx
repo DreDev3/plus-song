@@ -17,7 +17,7 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./icone-contato.png' alt='Telefone' />
+            <img src={`${import.meta.env.BASE_URL}icone-contato.png`} alt='Telefone' />
           </Link>
         </div>
         <div className="social">
@@ -26,7 +26,7 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./icone-email.png' alt='E-mail' />
+            <img src={`${import.meta.env.BASE_URL}icone-email.png`} alt='E-mail' />
           </Link>
         </div>
         <div className="social">
@@ -35,7 +35,7 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./icone-instagram.png' alt='Instagram' />
+            <img src={`${import.meta.env.BASE_URL}icone-instagram.png`} alt='Instagram' />
           </Link>
         </div>
         <div className="social">
@@ -44,7 +44,7 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src='./icone-facebook.png' alt='Facebook' />
+            <img src={`${import.meta.env.BASE_URL}icone-facebook.png`} alt='Facebook' />
           </Link>
         </div>
       </section>

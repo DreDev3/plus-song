@@ -16,7 +16,7 @@ export default function About() {
 
       <section class="profile">
         <div class="picture">
-          <img src="./André.png" alt="André" />
+          <img src={`${import.meta.env.BASE_URL}André.png`} alt="André" />
           <p>Edson André dos Santos</p>
           <Link
             to={'https://www.instagram.com/edsonandre/'}
@@ -25,7 +25,7 @@ export default function About() {
           >Bio</Link>
         </div>
         <div class="picture">
-          <img src="./Fabio.png" alt="Fabio" />
+          <img src={`${import.meta.env.BASE_URL}Fabio.png`} alt="Fabio" />
           <p>Fabio Aparecido Pereira</p>
           <Link
             to={''}
@@ -34,7 +34,7 @@ export default function About() {
           >Bio</Link>
         </div>
         <div class="picture">
-          <img src="./Lupe.png" alt="Lupe" />
+          <img src={`${import.meta.env.BASE_URL}Lupe.png`} alt="Lupe" />
           <p>Guadalupe Delaila Peters</p>
           <Link
             to={'https://www.instagram.com/oqlupe/'}

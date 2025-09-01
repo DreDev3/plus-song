@@ -37,11 +37,12 @@ main {
     }
   }
 
+  .dev-box img {
+    background-color: var(--cor-destaque);
+  }
+
   .dev-box li::marker {
-    margin: 6px 0;
-    content: counter(list-item) " - ";
     color: var(--cor-primaria);
-    font-weight: 700;
 
   }
 
@@ -106,6 +107,10 @@ main {
 
   a {
     color: var(--cor-destaque);
+  }
+
+  img {
+    background-color: var(--cor-destaque);
   }
 }
 

@@ -7,7 +7,7 @@ export default function Nav() {
     <header>
       <div className="logo">
         <Link to='/'>
-          <img src="./Logo-Plus-Song.png" alt="Logo Plus Song" />
+          <img src={`${import.meta.env.BASE_URL}Logo-Plus-Song.png`} alt="Logo Plus Song" />
         </Link>
       </div>
       <nav>

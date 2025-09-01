@@ -65,6 +65,10 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+
+  img {
+    border-radius: 50%;
+  }
 }
 
 .dev-box h4 {
