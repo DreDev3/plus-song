@@ -1,0 +1,124 @@
+:root {
+  --cor-primaria: #31135f;
+  --cor-secundaria: #9b4cda;
+  --cor-destaque: #F2D43D;
+}
+
+body.daltonismo {
+  --cor-primaria: #1E4D92;
+  --cor-secundaria: #4CB5F5;
+  --cor-destaque: #F5A623;
+}
+
+header {
+  background: var(--cor-primaria);
+
+  nav a:hover {
+    background-color: var(--cor-destaque);
+  }
+}
+
+input:checked+.slider {
+  background-color: var(--cor-secundaria);
+}
+
+main {
+  .wellcome {
+    color: var(--cor-primaria);
+  }
+
+  .partion {
+    background: linear-gradient(to bottom, var(--cor-primaria), var(--cor-destaque));
+  }
+
+  .list {
+    h4 {
+      color: var(--cor-primaria)
+    }
+  }
+
+  .dev-box li::marker {
+    margin: 6px 0;
+    content: counter(list-item) " - ";
+    color: var(--cor-primaria);
+    font-weight: 700;
+
+  }
+
+  .dev-box a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.video-card a {
+
+  color: var(--cor-primaria);
+}
+
+.container {
+  .search-section {
+    h2 {
+      color: var(--cor-primaria);
+    }
+
+    .input-container i {
+      color: var(--cor-destaque);
+    }
+
+    .input-container input {
+      background-color: var(--cor-secundaria);
+      border: 2px solid var(--cor-destaque);
+    }
+
+    input::placeholder {
+      color: var(--cor-destaque);
+    }
+
+    .button {
+      button {
+        background-color: var(--cor-primaria);
+        color: var(--cor-destaque);
+
+        &:hover {
+          background-color: var(--cor-secundaria);
+        }
+      }
+    }
+  }
+
+}
+
+.banner {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+.banner .song-details a {
+  color: var(--cor-primaria);
+}
+
+.profile .picture {
+  p {
+    color: var(--cor-primaria);
+  }
+
+  a {
+    color: var(--cor-destaque);
+  }
+}
+
+h2 {
+  color: var(--cor-primaria);
+}
+
+p {
+  color: var(--cor-secundaria);
+}
+
+footer {
+  p {
+    color: var(--cor-primaria);
+  }
+}

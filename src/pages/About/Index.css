@@ -1,0 +1,49 @@
+  h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  h2,
+  p {
+    color: #31135f;
+    font-weight: 700;
+  }
+
+  .description {
+    text-align: center;
+    color: #31135f;
+  }
+
+  .profile {
+    width: 70%;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .picture {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        color: #31135f;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #F2D43D;
+        font-weight: bold;
+      }
+    }
+  }
