@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import "./Index.css";
+import { useStatusColor } from "../../components/PageStatusColor/Index";
 
 export default function Search() {
   const API_KEY = "AIzaSyA6AaOjekwi6OtibbO_JoY3ZYlEW_EqbdM";
@@ -14,6 +15,7 @@ export default function Search() {
   const [results, setResults] = useState([]);
   const [banner, setBanner] = useState([]);
   const [videoId, setVideoId] = useState(null);
+  const { isOn } = useStatusColor();
 
   // Buscar vídeos por artista
   async function fetchTopVideos(name) {
@@ -88,7 +90,14 @@ export default function Search() {
 
     function shuffleBanner(videos) {
       const shuffled = [...videos].sort(() => 0.5 - Math.random());
-      const amount = window.innerWidth <= 900 ? 2 : 4;
+      let amount;
+      if (window.innerWidth <= 456) {
+        amount = 1;
+      } else if (window.innerWidth <= 900) {
+        amount = 2;
+      } else {
+        amount = 4;
+      }
       setBanner(shuffled.slice(0, amount));
     }
 
@@ -120,12 +129,19 @@ export default function Search() {
           </div>
 
           {loading && (
-            <FontAwesomeIcon
-              icon={faSpinner}
-              spin
-              size="2x"
-              style={{ color: "#31135f" }}
-            />
+            isOn ?
+              <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+                size="2x"
+                style={{ color: "#1E4D92" }}
+              />
+              : <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+                size="2x"
+                style={{ color: "#31135f" }}
+              />
           )}
 
           {artistInfo && (
@@ -160,12 +176,19 @@ export default function Search() {
         {/* Banner */}
         <section className="banner">
           {loadingBanner && (
-            <FontAwesomeIcon
-              icon={faSpinner}
-              spin
-              size="2x"
-              style={{ color: "#31135f", margin: 'auto' }}
-            />
+            isOn ?
+              <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+                size="2x"
+                style={{ color: "#1E4D92", margin: 'auto' }}
+              />
+              : <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+                size="2x"
+                style={{ color: "#31135f", margin: 'auto' }}
+              />
           )}
           {banner.map((video) => (
             <div className="song-card-banner" key={video.id.videoId}>

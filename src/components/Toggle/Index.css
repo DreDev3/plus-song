@@ -74,3 +74,23 @@ input:checked+.slider:before {
     transform: translateX(40px);
   }
 }
+
+@media (max-width: 456px) {
+  .slider {
+    width: 60px;
+    height: 20px;
+    left: 30px;
+    top: -8px;
+  }
+
+  .slider:before {
+    width: 15px;
+    height: 15px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+  input:checked+.slider:before {
+    transform: translateX(40px);
+  }
+}
