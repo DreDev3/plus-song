@@ -8,18 +8,21 @@ import Search from './pages/Search/Index'
 import Footer from './components/Footer/Index'
 
 import './theme.css'
+import { StatusProvider } from './components/PageStatusColor/Index'
 export default function App() {
   return (
     <>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/top-success" element={<TopSuccess />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer />
+      <StatusProvider>
+        <Nav />
+        <Routes>
+          <Route path="/plus-song" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/top-success" element={<TopSuccess />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </StatusProvider>
     </>
   )
 }

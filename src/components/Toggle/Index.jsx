@@ -1,17 +1,8 @@
-import { useState, useEffect } from "react";
-
+import { useStatusColor } from '../PageStatusColor/Index';
 import './Index.css';
 
 export default function Toggle() {
-  const [isOn, setIsOn] = useState(false);
-
-  useEffect(() => {
-    if (isOn) {
-      document.body.classList.add("daltonismo");
-    } else {
-      document.body.classList.remove("daltonismo");
-    }
-  }, [isOn]);
+  const { isOn, setIsOn } = useStatusColor();
 
   return (
     <div className="toggle-container">
@@ -23,7 +14,6 @@ export default function Toggle() {
         />
         <span className="slider"></span>
       </label>
-      <p>{isOn ? "" : ""}</p>
     </div>
   );
 }

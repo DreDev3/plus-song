@@ -88,7 +88,8 @@ export default function Search() {
 
     function shuffleBanner(videos) {
       const shuffled = [...videos].sort(() => 0.5 - Math.random());
-      setBanner(shuffled.slice(0, 4));
+      const amount = window.innerWidth <= 900 ? 2 : 4;
+      setBanner(shuffled.slice(0, amount));
     }
 
     initBanner();
@@ -106,7 +107,7 @@ export default function Search() {
             <i className="fa-solid fa-magnifying-glass"></i>
             <input
               type="text"
-              placeholder="Digite o nome de um artista"
+              placeholder="Digite o nome de um artista ou banda"
               value={artistName}
               onChange={(e) => setArtistName(e.target.value)}
             />

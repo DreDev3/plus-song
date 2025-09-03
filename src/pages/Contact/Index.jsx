@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 
 import './Index.css'
+import { useStatusColor } from '../../components/PageStatusColor/Index'
 export default function Contact() {
+  const { isOn } = useStatusColor();
   return (
     <>
       <h2>Fale Conosco</h2>
@@ -17,7 +19,8 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src={`${import.meta.env.BASE_URL}icone-contato.png`} alt='Telefone' />
+            {isOn ? <img src={`${import.meta.env.BASE_URL}icone-contato-(com-contraste).png`} alt='Telefone' /> :
+              <img src={`${import.meta.env.BASE_URL}icone-contato.png`} alt='Telefone' />}
           </Link>
         </div>
         <div className="social">
@@ -26,7 +29,8 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src={`${import.meta.env.BASE_URL}icone-email.png`} alt='E-mail' />
+            {isOn ? <img src={`${import.meta.env.BASE_URL}icone-email-(com-contraste).png`} alt='Telefone' /> :
+              <img src={`${import.meta.env.BASE_URL}icone-email.png`} alt='E-mail' />}
           </Link>
         </div>
         <div className="social">
@@ -35,7 +39,8 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src={`${import.meta.env.BASE_URL}icone-instagram.png`} alt='Instagram' />
+            {isOn ? <img src={`${import.meta.env.BASE_URL}icone-instagram(com-contraste).png`} alt='Telefone' /> :
+              <img src={`${import.meta.env.BASE_URL}icone-instagram.png`} alt='Instagram' />}
           </Link>
         </div>
         <div className="social">
@@ -44,7 +49,8 @@ export default function Contact() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img src={`${import.meta.env.BASE_URL}icone-facebook.png`} alt='Facebook' />
+            {isOn ? <img src={`${import.meta.env.BASE_URL}icone-facebook-(com-contraste).png`} alt='Telefone' /> :
+              <img src={`${import.meta.env.BASE_URL}icone-facebook.png`} alt='Facebook' />}
           </Link>
         </div>
       </section>

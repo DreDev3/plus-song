@@ -237,3 +237,13 @@ input::placeholder {
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .input-container {
+    min-width: 60%;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}
