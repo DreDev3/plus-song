@@ -4,6 +4,7 @@
 
   .search-section {
     width: 100%;
+    position: relative;
 
     h2 {
       color: #31135f;
@@ -13,7 +14,7 @@
     .input-container {
       width: 40%;
       position: relative;
-      display: inline-block;
+      margin: auto;
     }
 
     .input-container i {
@@ -239,11 +240,51 @@ input::placeholder {
 }
 
 @media (max-width: 900px) {
-  .input-container {
-    min-width: 60%;
+  .container {
+    padding: 0;
   }
 
-  input::placeholder {
-    font-size: 12px;
+  .search-section {
+
+    .input-container {
+      min-width: 80%;
+    }
+
+    .input-container input {
+      width: 90% !important;
+    }
+
+    input::placeholder {
+      font-size: 12px;
+    }
+
+    .clear-btn {
+      right: 35px !important;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0;
+  }
+
+  .search-section {
+
+    .input-container {
+      min-width: 80%;
+    }
+
+    .input-container input {
+      width: 90% !important;
+    }
+
+    input::placeholder {
+      font-size: 12px;
+    }
+
+    .clear-btn {
+      right: 50px !important;
+    }
   }
 }

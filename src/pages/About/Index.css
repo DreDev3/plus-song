@@ -48,3 +48,15 @@
       }
     }
   }
+
+  @media (max-width: 456px) {
+    .profile {
+      display: flex;
+      gap: 30px;
+
+      .picture {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }

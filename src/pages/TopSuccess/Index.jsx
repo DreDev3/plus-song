@@ -46,7 +46,7 @@ export default function TopSuccess() {
     fetchTop5MostPopularMusic();
   }, []);
   return (
-    <>
+    <main className='top-container'>
       <h2>Top 5 Músicas Populares no YouTube Brasil</h2>
       <div id='topResults'>
 
@@ -88,6 +88,6 @@ export default function TopSuccess() {
           })}
         </div>
       </div>
-    </>
+    </main>
   );
 }

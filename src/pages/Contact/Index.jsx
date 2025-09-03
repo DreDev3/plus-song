@@ -5,7 +5,7 @@ import { useStatusColor } from '../../components/PageStatusColor/Index'
 export default function Contact() {
   const { isOn } = useStatusColor();
   return (
-    <>
+    <main className='contact-container'>
       <h2>Fale Conosco</h2>
       <p class="intro">
         Fale com a gente de qualquer lugar, pelo site ou telefone.
@@ -54,6 +54,6 @@ export default function Contact() {
           </Link>
         </div>
       </section>
-    </>
+    </main>
   )
 }
