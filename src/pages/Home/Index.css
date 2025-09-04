@@ -183,6 +183,13 @@ h2 {
   .dev-box ol {
     columns: 1;
   }
+
+  .video-content {
+    iframe {
+      width: 400px;
+      height: 250px;
+    }
+  }
 }
 
 @media (max-width: 456px) {
@@ -190,4 +197,6 @@ h2 {
     height: 300px;
     margin: 10px;
   }
+
+
 }
