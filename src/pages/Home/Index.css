@@ -107,7 +107,41 @@ h2 {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
+  .sugestions {
+    width: 100%;
+  }
+
+  .dev-box {
+    width: 45vw;
+    margin-top: 40px;
+
+    h3 {
+      width: 40%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .list {
+      width: 80%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+
+  .dev-box ol {
+    list-style-type: none;
+    height: 100%;
+    columns: 1;
+  }
+}
+
+@media (max-width: 850px) {
 
   main {
     display: flex;

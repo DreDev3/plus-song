@@ -10,6 +10,7 @@ export default function TopSuccess() {
 
   const [loading, setLoading] = useState(false);
   const [videos, setVideos] = useState([]);
+  const [videoId, setVideoId] = useState(null);
 
   useEffect(() => {
     async function fetchTop5MostPopularMusic() {
@@ -46,48 +47,72 @@ export default function TopSuccess() {
     fetchTop5MostPopularMusic();
   }, []);
   return (
-    <main className='top-container'>
-      <h2>Top 5 Músicas Populares no YouTube Brasil</h2>
-      <div id='topResults'>
+    <>
+      <main className='top-container'>
+        <h2>Top 5 Músicas Populares no YouTube Brasil</h2>
+        <div id='topResults'>
 
-        {loading && <FontAwesomeIcon
-          icon={faSpinner}
-          spin
-          size="2x"
-          style={{ color: "#31135f" }}
-        />}
+          {loading && <FontAwesomeIcon
+            icon={faSpinner}
+            spin
+            size="2x"
+            style={{ color: "#31135f" }}
+          />}
 
-        {!loading && videos.length === 0 && <p>Nenhum vídeo encontrado.</p>}
+          {!loading && videos.length === 0 && <p>Nenhum vídeo encontrado.</p>}
 
-        <div className="video-list">
-          {videos.map((video) => {
-            const title = video.snippet.title;
-            const videoId = video.id;
-            const thumb = video.snippet.thumbnails.medium.url;
-            const views = parseInt(video.statistics.viewCount).toLocaleString("pt-BR");
+          <div className="video-list">
+            {videos.map((video) => {
+              const title = video.snippet.title;
+              const id = video.id;
+              const thumb = video.snippet.thumbnails.medium.url;
+              const views = parseInt(video.statistics.viewCount).toLocaleString("pt-BR");
 
-            return (
-              <div key={videoId} className="video-card">
-                <a
-                  href={`https://www.youtube.com/watch?v=${videoId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={thumb} alt={title} />
-                  <div className="video-info">
-                    <h3>
+              return (
+                <div key={id} className="video-card">
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setVideoId(id);
+                    }}
+                    title={title}
+                  >
+                    <img src={thumb} alt={title} />
+                    <div className="video-info">
+                      <h3>
 
-                      {title}
+                        {title}
 
-                    </h3>
-                    <p className="views">Visualizações: {views}</p>
-                  </div>
-                </a>
-              </div>
-            );
-          })}
+                      </h3>
+                      <p className="views">Visualizações: {views}</p>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+            <a id="btnVerMais" class="btn" href="https://www.youtube.com/feed/music?gl=BR" target="_blank">
+              Mostrar mais
+            </a>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      {videoId && (
+        <div className="video-modal">
+          <div className="video-content">
+            <a className="close" onClick={() => setVideoId(null)}>
+              &times;
+            </a>
+            <iframe
+              width="560"
+              height="315"
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

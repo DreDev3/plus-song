@@ -50,6 +50,12 @@ input[type="text"] {
   border: 1px solid #ccc;
 }
 
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 @media (max-width: 456px) {
   .video-list {

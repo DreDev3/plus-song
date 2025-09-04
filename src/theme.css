@@ -54,7 +54,20 @@ main {
 }
 
 .video-card a {
+  color: var(--cor-primaria);
+}
 
+.btn {
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+  transition: ease-out 0.3s;
+
+  &:hover {
+    background-color: var(--cor-secundaria);
+  }
+}
+
+.profile-content .close {
   color: var(--cor-primaria);
 }
 
