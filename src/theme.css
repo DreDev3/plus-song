@@ -19,6 +19,10 @@ body {
 header {
   background: var(--cor-primaria);
 
+  nav {
+    background: var(--cor-primaria);
+  }
+
   nav a:hover {
     background-color: var(--cor-destaque);
   }

@@ -91,5 +91,6 @@ nav a:hover {
 
   .hamburguer.fixed {
     position: fixed;
+    top: 10px;
   }
 }
