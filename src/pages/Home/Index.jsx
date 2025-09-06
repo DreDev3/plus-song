@@ -194,7 +194,7 @@ export default function Home() {
           <div class="dev-box">
             <h3><img src={`${import.meta.env.BASE_URL}Lupe.png`} alt="Lupe" /></h3>
             <div class="list">
-              <h4>Sugestões da Guadalupe</h4>
+              <h4>Sugestões da <br />Guadalupe</h4>
               <ol>
                 <li>
                   <a
@@ -273,7 +273,7 @@ export default function Home() {
       </main>
 
       {videoId && (
-        <div className="video-modal">
+        <div className="video-modal" onClick={() => setVideoId(null)}>
           <div className="video-content">
             <a className="close" onClick={() => setVideoId(null)}>
               &times;

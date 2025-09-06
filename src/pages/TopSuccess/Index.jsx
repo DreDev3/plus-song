@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import './Index.css'
+import TopPage from '../../components/TopPage/Index';
 
 
 export default function TopSuccess() {
@@ -56,7 +57,7 @@ export default function TopSuccess() {
             icon={faSpinner}
             spin
             size="2x"
-            style={{ color: "#31135f" }}
+            style={{ color: "#0097e6" }}
           />}
 
           {!loading && videos.length === 0 && <p>Nenhum vídeo encontrado.</p>}
@@ -92,13 +93,14 @@ export default function TopSuccess() {
               );
             })}
             <a id="btnVerMais" class="btn" href="https://www.youtube.com/feed/music?gl=BR" target="_blank">
-              Mostrar mais
+              Mostrar mais <FontAwesomeIcon icon={faPlusCircle} size='x' />
             </a>
           </div>
         </div>
       </main>
+      <TopPage />
       {videoId && (
-        <div className="video-modal">
+        <div className="video-modal" onClick={() => setVideoId(null)}>
           <div className="video-content">
             <a className="close" onClick={() => setVideoId(null)}>
               &times;

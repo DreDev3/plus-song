@@ -4,6 +4,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import "./Index.css";
 import { useStatusColor } from "../../components/PageStatusColor/Index";
+import TopPage from '../../components/TopPage/Index'
 
 export default function Search() {
   const API_KEY = "AIzaSyA6AaOjekwi6OtibbO_JoY3ZYlEW_EqbdM";
@@ -19,6 +20,7 @@ export default function Search() {
 
   // Buscar vídeos por artista
   async function fetchTopVideos(name) {
+
     if (!name.trim()) {
       alert("Digite o nome do cantor ou banda!");
       return;
@@ -119,13 +121,16 @@ export default function Search() {
               placeholder="Digite o nome de um artista ou banda"
               value={artistName}
               onChange={(e) => setArtistName(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') fetchTopVideos(artistName) }}
             />
             <button className="clear-btn" onClick={() => setArtistName("")}>
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
           <div className="button">
-            <button onClick={() => fetchTopVideos(artistName)}>Buscar</button>
+            <button
+              onClick={() => fetchTopVideos(artistName)
+              }>Buscar</button>
           </div>
 
           {loading && (
@@ -134,13 +139,13 @@ export default function Search() {
                 icon={faSpinner}
                 spin
                 size="2x"
-                style={{ color: "#1E4D92" }}
+                style={{ color: "#040608" }}
               />
               : <FontAwesomeIcon
                 icon={faSpinner}
                 spin
                 size="2x"
-                style={{ color: "#31135f" }}
+                style={{ color: "#283b4b" }}
               />
           )}
 
@@ -181,13 +186,13 @@ export default function Search() {
                 icon={faSpinner}
                 spin
                 size="2x"
-                style={{ color: "#1E4D92", margin: 'auto' }}
+                style={{ color: "#d3d4d2", margin: 'auto' }}
               />
               : <FontAwesomeIcon
                 icon={faSpinner}
                 spin
                 size="2x"
-                style={{ color: "#31135f", margin: 'auto' }}
+                style={{ color: "#283b4b", margin: 'auto' }}
               />
           )}
           {banner.map((video) => (
@@ -211,10 +216,10 @@ export default function Search() {
           ))}
         </section>
       </main>
-
+      <TopPage />
       {/* Modal vídeo */}
       {videoId && (
-        <div className="video-modal">
+        <div className="video-modal" onClick={() => setVideoId(null)}>
           <div className="video-content">
             <a className="close" onClick={() => setVideoId(null)}>
               &times;

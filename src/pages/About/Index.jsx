@@ -12,60 +12,60 @@ export default function About() {
 
   return (
     <>
-      <section class="description">
-        <h2>Sobre Nós</h2>
-        <p>
-          Somos uma plataforma que filtra músicas do YouTube, tornando mais fácil encontrar os maiores sucessos.
-        </p>
-        <p>
-          Nosso propósito é ajudar os usuários a descobrir tanto novas canções quanto as mais populares do momento.
-        </p>
-      </section>
+      <main className='contact-container'>
+        <section class="description">
+          <h2>Sobre Nós</h2>
+          <p>
+            Somos uma plataforma que filtra músicas do YouTube, tornando mais fácil encontrar os maiores sucessos.
+            Nosso propósito é ajudar os usuários a descobrir tanto novas canções quanto as mais populares do momento.
+          </p>
+        </section>
 
-      <section class="profile">
-        <div class="picture">
-          <img src={`${import.meta.env.BASE_URL}André.png`} alt="André" />
-          <p>Edson André dos Santos</p>
-          <a
-            onClick={() => setProfileId(profileDescription.edson)}
-            target='_blank'
-            rel='noopener noreferrer'
-          >Biografia</a>
-        </div>
-        <div class="picture">
-          <img src={`${import.meta.env.BASE_URL}Fabio.png`} alt="Fabio" />
-          <p>Fabio Aparecido Pereira</p>
-          <a
-            onClick={() => setProfileId(profileDescription.fabio)}
-            target='_blank'
-            rel='noopener noreferrer'
-          >Biografia</a>
-        </div>
-        <div class="picture">
-          <img src={`${import.meta.env.BASE_URL}Lupe.png`} alt="Lupe" />
-          <p>Guadalupe Delaila Peters</p>
-          <a
-            onClick={() => setProfileId(profileDescription.lupe)}
-            target='_blank'
-            rel='noopener noreferrer'
-          >Biografia</a>
-        </div>
-      </section>
-
-      {/* Modal Perfil */}
-      {profileId && (
-        <div className="profile-modal" onClick={() => setProfileId(null)}>
-          <div className="profile-content">
-            <a className="close" onClick={() => setProfileId(null)}>
-              &times;
-            </a>
-
-            {/* Conteúdo do perfil */}
-            <h2>{profileId}</h2>
-            <p>{profileDescription[profileId]}</p>
+        <section class="profile">
+          <div class="picture">
+            <img src={`${import.meta.env.BASE_URL}André.png`} alt="André" />
+            <p>Edson André dos Santos</p>
+            <a
+              onClick={() => setProfileId(profileDescription.edson)}
+              target='_blank'
+              rel='noopener noreferrer'
+            >Biografia</a>
           </div>
-        </div>
-      )}
+          <div class="picture">
+            <img src={`${import.meta.env.BASE_URL}Fabio.png`} alt="Fabio" />
+            <p>Fabio Aparecido Pereira</p>
+            <a
+              onClick={() => setProfileId(profileDescription.fabio)}
+              target='_blank'
+              rel='noopener noreferrer'
+            >Biografia</a>
+          </div>
+          <div class="picture">
+            <img src={`${import.meta.env.BASE_URL}Lupe.png`} alt="Lupe" />
+            <p>Guadalupe Delaila Peters</p>
+            <a
+              onClick={() => setProfileId(profileDescription.lupe)}
+              target='_blank'
+              rel='noopener noreferrer'
+            >Biografia</a>
+          </div>
+        </section>
+
+        {/* Modal Perfil */}
+        {profileId && (
+          <div className="profile-modal" onClick={() => setProfileId(null)}>
+            <div className="profile-content">
+              <a className="close" onClick={() => setProfileId(null)}>
+                &times;
+              </a>
+
+              {/* Conteúdo do perfil */}
+              <h2>{profileId}</h2>
+              <p>{profileDescription[profileId]}</p>
+            </div>
+          </div>
+        )}
+      </main>
     </>
   )
 }

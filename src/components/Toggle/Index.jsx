@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useStatusColor } from '../PageStatusColor/Index';
 import './Index.css';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 export default function Toggle() {
   const { isOn, setIsOn } = useStatusColor();
@@ -12,7 +14,15 @@ export default function Toggle() {
           checked={isOn}
           onChange={() => setIsOn(!isOn)}
         />
-        <span className="slider"></span>
+        <span className="slider">
+          <span className="knob">
+            {isOn ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
+          </span>
+        </span>
       </label>
     </div>
   );

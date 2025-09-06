@@ -1,13 +1,19 @@
 :root {
-  --cor-primaria: #31135f;
-  --cor-secundaria: #9b4cda;
-  --cor-destaque: #F2D43D;
+  --cor-primaria: #283b4b;
+  --cor-secundaria: #1b2329;
+  --cor-tercearia: #f5f6fa;
+  --cor-destaque: #0097e6;
+  --cor-adicional: #283b4b;
 }
 
 body.daltonismo {
-  --cor-primaria: #1E4D92;
-  --cor-secundaria: #4CB5F5;
-  --cor-destaque: #F5A623;
+  --cor-primaria: #040608;
+  --cor-secundaria: #d3d4d2;
+  --cor-tercearia: #090a0c;
+}
+
+body {
+  background: var(--cor-tercearia);
 }
 
 header {
@@ -18,31 +24,44 @@ header {
   }
 }
 
+.slider {
+  background-color: var(--cor-secundaria);
+}
+
+.knob {
+  background: var(--cor-tercearia);
+  color: var(--cor-secundaria);
+}
+
+.slider::before {
+  background-color: var(--cor-tercearia);
+}
+
 input:checked+.slider {
   background-color: var(--cor-secundaria);
 }
 
 main {
   .wellcome {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
   }
 
   .partion {
-    background: linear-gradient(to bottom, var(--cor-primaria), var(--cor-destaque));
+    background: linear-gradient(to right, var(--cor-destaque), var(--cor-primaria));
   }
 
   .list {
     h4 {
-      color: var(--cor-primaria)
+      color: var(--cor-secundaria)
     }
   }
 
   .dev-box img {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-adicional);
   }
 
   .dev-box li::marker {
-    color: var(--cor-primaria);
+    color: var(--cor-adicional);
 
   }
 
@@ -53,17 +72,37 @@ main {
   }
 }
 
+.song-card:hover {
+  background: var(--cor-primaria);
+
+  a {
+    color: #d3d4d2;
+  }
+}
+
+.song-details a {
+  color: var(--cor-secundaria);
+}
+
+.video-card:hover {
+  background-color: #1b2329d8;
+
+  a,
+  p {
+    color: #d3d4d2;
+  }
+}
+
 .video-card a {
-  color: var(--cor-primaria);
+  color: var(--cor-secundaria);
 }
 
 .btn {
-  background-color: var(--cor-primaria);
-  color: var(--cor-destaque);
+  color: var(--cor-secundaria);
   transition: ease-out 0.3s;
 
   &:hover {
-    background-color: var(--cor-secundaria);
+    color: var(--cor-adicional);
   }
 }
 
@@ -74,26 +113,26 @@ main {
 .container {
   .search-section {
     h2 {
-      color: var(--cor-primaria);
+      color: var(--cor-secundaria);
     }
 
     .input-container i {
-      color: var(--cor-destaque);
+      color: var(--cor-tercearia);
     }
 
     .input-container input {
-      background-color: var(--cor-secundaria);
+      background-color: var(--cor-destaque);
       border: 2px solid var(--cor-destaque);
     }
 
     input::placeholder {
-      color: var(--cor-destaque);
+      color: var(--cor-primaria);
     }
 
     .button {
       button {
         background-color: var(--cor-primaria);
-        color: var(--cor-destaque);
+        color: #d3d4d2;
 
         &:hover {
           background-color: var(--cor-secundaria);
@@ -105,17 +144,22 @@ main {
 }
 
 .banner {
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-primaria);
   color: var(--cor-primaria);
 }
 
 .banner .song-details a {
-  color: var(--cor-primaria);
+  color: #d3d4d2;
+}
+
+.banner .song-card-banner:hover {
+  transform: scale(1.05);
+  background-color: #1b2329d8;
 }
 
 .profile .picture {
   p {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
   }
 
   a {
@@ -128,15 +172,19 @@ main {
 }
 
 h2 {
-  color: var(--cor-primaria);
+  color: var(--cor-secundaria);
 }
 
 p {
   color: var(--cor-secundaria);
 }
 
+.top-page {
+  color: var(--cor-secundaria);
+}
+
 footer {
   p {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
   }
 }
