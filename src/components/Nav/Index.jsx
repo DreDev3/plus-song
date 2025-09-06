@@ -15,9 +15,8 @@ export default function Nav() {
         </NavLink>
       </div>
       <a
-        className="hamburguer"
+        className={`hamburguer ${isShort ? 'fixed' : 'static'}`}
         onClick={() => setIsShort(!isShort)}
-        aria-label="Menu"
       >
         <FontAwesomeIcon icon={isShort ? faTimes : faBars} />
       </a>

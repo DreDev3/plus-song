@@ -191,6 +191,26 @@ main {
       font-size: 12px;
     }
   }
+}
 
+@media (max-width: 567px) {
+  .sugestions {
+    min-width: 90vw;
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+  }
 
+  .dev-box {
+    height: 300px;
+    margin: 10px;
+
+    h4 {
+      font-size: 14px;
+    }
+
+    li {
+      font-size: 12px;
+    }
+  }
 }

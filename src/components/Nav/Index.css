@@ -55,7 +55,7 @@ nav a:hover {
   }
 
   nav {
-    width: 25%;
+    width: 40%;
     height: 100%;
     position: fixed;
     display: flex;
@@ -80,9 +80,16 @@ nav a:hover {
 
   .hamburguer {
     display: block;
-    position: fixed;
     right: 10px;
     top: 35px;
     z-index: 3;
+  }
+
+  .hamburguer.static {
+    position: absolute;
+  }
+
+  .hamburguer.fixed {
+    position: fixed;
   }
 }
