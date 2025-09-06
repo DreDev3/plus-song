@@ -40,13 +40,49 @@ nav a:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 720px) {
-  nav {
-    width: 100%;
-  }
+.hamburguer {
+  color: #d3d4d2;
+  cursor: pointer;
+  font-size: 28px;
+  display: none;
+}
+
+@media (max-width: 740px) {
 
   nav a {
     font-size: 12px;
     padding: 5px !important;
+  }
+
+  nav {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 0 !important;
+    background: #283b4b;
+    padding: 10px;
+    border-radius: 8px;
+    padding: 100px 20px 20px;
+    z-index: 2;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  .hamburguer {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 35px;
+    z-index: 3;
   }
 }
