@@ -193,10 +193,11 @@ main {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 467px) {
   .sugestions {
+    border: 1px solid;
     min-width: 90vw;
-    margin: 60px;
+    margin: 80px;
     display: flex;
     justify-content: center;
   }
@@ -205,12 +206,20 @@ main {
     height: 300px;
     margin: 10px;
 
+    ol {
+      width: 100%;
+      border: 1px solid;
+      position: relative;
+      bottom: 20px;
+      right: 20px;
+    }
+
     h4 {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     li {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 }

@@ -36,7 +36,7 @@ export default function Home() {
           <div class="dev-box">
             <h3><img src={`${import.meta.env.BASE_URL}André.png`} alt="André" /></h3>
             <div class="list">
-              <h4>Sugestões do André</h4>
+              <h4>Sugestões do <br />André</h4>
               <ol>
                 <li>
                   <a
@@ -115,7 +115,7 @@ export default function Home() {
           <div class="dev-box">
             <h3><img src={`${import.meta.env.BASE_URL}Fabio.png`} alt="Fabio" /></h3>
             <div class="list">
-              <h4>Sugestões do Fabio</h4>
+              <h4>Sugestões do <br />Fabio</h4>
               <ol>
                 <li>
                   <a
