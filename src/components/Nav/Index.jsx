@@ -1,21 +1,21 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
-import Toggle from '../Toggle/Index'
-import './Index.css'
+import Toggle from '../Toggle/Index';
+import './Index.css';
 export default function Nav() {
   return (
     <header>
       <div className="logo">
-        <Link to='/plus-song'>
+        <NavLink to='/plus-song'>
           <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="Logo Plus Song" />
-        </Link>
+        </NavLink>
       </div>
       <nav>
-        <Link to="/plus-song">Home</Link>
-        <Link to="/search">Buscar músicas</Link>
-        <Link to="/top-success">Top Sucessos</Link>
-        <Link to="/contact">Contatos</Link>
-        <Link to="/about">Sobre Nós</Link>
+        <NavLink to="/plus-song">Home</NavLink>
+        <NavLink to="/search">Buscar músicas</NavLink>
+        <NavLink to="/top-success">Top Sucessos</NavLink>
+        <NavLink to="/contact">Contatos</NavLink>
+        <NavLink to="/about">Sobre Nós</NavLink>
       </nav>
       <Toggle />
     </header>

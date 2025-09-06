@@ -22,6 +22,11 @@ header {
   nav a:hover {
     background-color: var(--cor-destaque);
   }
+
+  nav a.active {
+    background-color: var(--cor-destaque);
+    border-radius: 10px;
+  }
 }
 
 .slider {
