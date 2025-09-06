@@ -22,13 +22,13 @@ export default function Home() {
       <main>
         <section class="wellcome">
           <span>PLUS SONG é o espaço certo para quem respira música!</span>
-          <br />Aqui você pode buscar seus artistas, descobrir
-          <br />novidades e ver quais são as músicas mais bombadas
-          <br />no YouTube.
-          <br />Criamos o site pensando em você, que não vive sem um
-          <br />bom som e adora estar conectado ao que todo mundo
-          <br />está ouvindo.
-          <br /><span>Acesse o menu acima e bora curtir!</span>
+          <br /> Aqui você pode buscar seus artistas, descobrir
+          novidades e ver quais são as músicas mais bombadas
+          no YouTube.
+          Criamos o site pensando em você, que não vive sem um
+          bom som e adora estar conectado ao que todo mundo
+          está ouvindo. <br />
+          <span>Acesse o menu acima e bora curtir!</span>
 
         </section>
         <div class="partion"></div>
