@@ -186,7 +186,6 @@ main {
 
 @media (max-width: 467px) {
   .sugestions {
-    border: 1px solid;
     min-width: 90vw;
     margin: 80px;
     display: flex;
@@ -211,7 +210,6 @@ main {
 
     ol {
       width: 100%;
-      border: 1px solid;
       position: relative;
       bottom: 20px;
       right: 20px;
