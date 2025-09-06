@@ -49,17 +49,8 @@ main {
   margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-
-  .list {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .dev-box ol {
@@ -205,6 +196,18 @@ main {
   .dev-box {
     height: 300px;
     margin: 10px;
+
+    h3 {
+      width: 80%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .list {
+      margin-top: -30px;
+    }
 
     ol {
       width: 100%;
