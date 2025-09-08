@@ -77,7 +77,7 @@ main {
 @media (max-width: 1400px) {
   .sugestions {
     width: 100%;
-    margin-top: 100px;
+    margin: 100px 0;
   }
 
   .dev-box {
@@ -127,15 +127,15 @@ main {
 
   .sugestions {
     width: 100%;
-    margin: 100px;
   }
 
   .dev-box {
     width: 70vw;
-    margin: 10px;
+    height: 100vh;
+    margin-top: 200px;
 
     h3 {
-      width: 60%;
+      width: 50%;
 
       img {
         width: 100%;

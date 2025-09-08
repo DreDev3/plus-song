@@ -2,5 +2,10 @@ footer {
   text-align: center;
   margin: 20px 0;
   font-size: 14px;
-  color: #888;
+}
+
+@media (max-width: 850px) {
+  footer {
+    margin-top: 90px;
+  }
 }

@@ -121,6 +121,10 @@
 
       .picture {
         width: 15vw;
+
+        p {
+          font-size: 10px;
+        }
       }
     }
   }
@@ -133,6 +137,10 @@
 
       .picture {
         width: 20vw;
+
+        p {
+          font-size: 10px;
+        }
       }
     }
 
