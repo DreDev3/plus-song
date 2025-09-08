@@ -115,8 +115,13 @@ main {
   }
 }
 
+.profile-content {
+  background: var(--cor-tercearia);
+  color: var(--cor-secundaria);
+}
+
 .profile-content .close {
-  color: var(--cor-primaria);
+  color: var(--cor-secundaria);
 }
 
 .container {
