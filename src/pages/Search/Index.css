@@ -279,7 +279,6 @@ input::placeholder {
   .song-card {
     width: 50%;
     height: 50%;
-    border: 1px solid;
 
     img {
       width: 50vw;
