@@ -6,4 +6,28 @@
   right: 10px;
   cursor: pointer;
   border-radius: 50%;
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  visibility: hidden;
+  pointer-events: none;
+
+  /* animações */
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    visibility 0s linear .25s;
+  /* atrasa voltar a ficar "visível: hidden" */
+}
+
+.top-page.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+
+  /* remove o atraso da visibilidade quando mostra */
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
 }

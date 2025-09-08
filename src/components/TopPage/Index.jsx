@@ -29,9 +29,10 @@ export default function TopPage() {
   };
   return (
     <>
-      <div className="top-page" onClick={scrollToTop} >
+      <div className={`top-page ${visible ? 'show' : ''}`} onClick={scrollToTop} >
         <FontAwesomeIcon icon={faCircleUp} size="3x" />
       </div>
+
     </>
   )
 }
