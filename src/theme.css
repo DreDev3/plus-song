@@ -4,12 +4,13 @@
   --cor-tercearia: #f5f6fa;
   --cor-destaque: #0097e6;
   --cor-adicional: #283b4b;
+  --cor-adicional-darker: #090a0c;
 }
 
 body.daltonismo {
   --cor-primaria: #040608;
   --cor-secundaria: #d3d4d2;
-  --cor-tercearia: #090a0c;
+  --cor-tercearia: #0e1013;
 }
 
 body {
@@ -149,7 +150,8 @@ main {
         color: #d3d4d2;
 
         &:hover {
-          background-color: var(--cor-secundaria);
+          background-color: var(--cor-adicional-darker);
+          color: var(--cor-destaque);
         }
       }
     }

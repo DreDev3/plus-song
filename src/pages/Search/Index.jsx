@@ -128,9 +128,16 @@ export default function Search() {
             </button>
           </div>
           <div className="button">
-            <button
-              onClick={() => fetchTopVideos(artistName)
-              }>Buscar</button>
+            {isOn ?
+              <button
+                onClick={() => fetchTopVideos(artistName)}
+                style={{ border: '1px solid #0097e6' }}
+              >Buscar
+              </button> :
+              <button
+                onClick={() => fetchTopVideos(artistName)}
+              >Buscar
+              </button>}
           </div>
 
           {loading && (
