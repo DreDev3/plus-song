@@ -67,9 +67,13 @@
     height: 60%;
     padding: 50px;
     border-radius: 30px;
-    background: #d6a4ffd5;
+    background: #d3d4d2;
     overflow-y: scroll;
     scrollbar-width: none;
+
+    h2 {
+      font-weight: normal;
+    }
   }
 
   .profile-content .close {

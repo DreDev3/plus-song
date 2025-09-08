@@ -61,7 +61,6 @@ export default function About() {
 
               {/* Conteúdo do perfil */}
               <h2>{profileId}</h2>
-              <p>{profileDescription[profileId]}</p>
             </div>
           </div>
         )}
