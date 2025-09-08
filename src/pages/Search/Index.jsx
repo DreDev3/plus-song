@@ -159,27 +159,28 @@ export default function Search() {
           <div id="results">
             {results.map((video) => (
               <div className="song-card" key={video.id.videoId}>
-                <img
-                  src={video.snippet.thumbnails.medium.url}
-                  alt={video.snippet.title}
-                />
-                <div className="song-details">
-                  <h3>
-                    <a
-                      onClick={() => setVideoId(video.id.videoId)}
-                      className="link-a"
-                    >
-                      {video.snippet.title}
-                    </a>
-                  </h3>
-                </div>
+                <a
+                  onClick={() => setVideoId(video.id.videoId)}
+                >
+                  <img
+                    src={video.snippet.thumbnails.medium.url}
+                    alt={video.snippet.title}
+                  />
+                  <div className="song-details">
+                    <h3>
+                      {video.snippet.title.length > 35
+                        ? video.snippet.title.substring(0, 35) + "..."
+                        : video.snippet.title}
+                    </h3>
+                  </div>
+                </a>
               </div>
             ))}
           </div>
-        </section>
+        </section >
 
         {/* Banner */}
-        <section className="banner">
+        < section className="banner" >
           {loadingBanner && (
             isOn ?
               <FontAwesomeIcon
@@ -194,46 +195,51 @@ export default function Search() {
                 size="2x"
                 style={{ color: "#283b4b", margin: 'auto' }}
               />
-          )}
-          {banner.map((video) => (
-            <div className="song-card-banner" key={video.id.videoId}>
-              <img
-                src={video.snippet.thumbnails.medium.url}
-                alt={video.snippet.title}
-              />
-              <div className="song-details">
-                <h3>
-                  <a
-                    href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {video.snippet.title}
-                  </a>
-                </h3>
+          )
+          }
+          {
+            banner.map((video) => (
+              <div className="song-card-banner" key={video.id.videoId}>
+                <img
+                  src={video.snippet.thumbnails.medium.url}
+                  alt={video.snippet.title}
+                />
+                <div className="song-details">
+                  <h3>
+                    <a
+                      href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {video.snippet.title}
+                    </a>
+                  </h3>
+                </div>
               </div>
-            </div>
-          ))}
-        </section>
-      </main>
+            ))
+          }
+        </section >
+      </main >
       <TopPage />
       {/* Modal vídeo */}
-      {videoId && (
-        <div className="video-modal" onClick={() => setVideoId(null)}>
-          <div className="video-content">
-            <a className="close" onClick={() => setVideoId(null)}>
-              &times;
-            </a>
-            <iframe
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
+      {
+        videoId && (
+          <div className="video-modal" onClick={() => setVideoId(null)}>
+            <div className="video-content">
+              <a className="close" onClick={() => setVideoId(null)}>
+                &times;
+              </a>
+              <iframe
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
     </>
   );
 }

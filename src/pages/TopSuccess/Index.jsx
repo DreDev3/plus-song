@@ -83,7 +83,9 @@ export default function TopSuccess() {
                     <div className="video-info">
                       <h3>
 
-                        {title}
+                        {title.length > 35
+                          ? title.substring(0, 35) + "..."
+                          : title}
 
                       </h3>
                       <p className="views">Visualizações: {views}</p>

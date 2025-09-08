@@ -7,7 +7,6 @@
     position: relative;
 
     h2 {
-      color: #31135f;
       font-weight: 700;
     }
 
@@ -22,7 +21,6 @@
       left: 20px;
       top: 50%;
       transform: translateY(35%);
-      color: #F2D43D;
     }
 
     .input-container input {
@@ -31,8 +29,6 @@
       margin-top: 30px;
       padding-left: 30px;
       text-indent: 10px;
-      background-color: #9b4cda;
-      border: 2px solid #F2D43D;
       border-radius: 10px;
       outline: none;
     }
@@ -59,7 +55,6 @@ input::placeholder {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #F2D43D;
   opacity: 1;
 }
 
@@ -71,16 +66,10 @@ input::placeholder {
     width: 40%;
     height: 40px;
     border: none;
-    background-color: #31135f;
     border-radius: 10px;
-    color: #F2D43D;
     font-size: 18px;
     cursor: pointer;
     transition: ease-out 0.3s;
-
-    &:hover {
-      background-color: #9b4cda;
-    }
   }
 }
 
@@ -129,7 +118,7 @@ input::placeholder {
 
 .song-card {
   width: 30%;
-  height: 250px;
+  height: 30%;
   padding: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -137,7 +126,8 @@ input::placeholder {
   align-items: center;
 
   img {
-    width: 70%;
+    width: 25vw;
+    height: 60%;
   }
 }
 
@@ -156,10 +146,6 @@ input::placeholder {
   height: 100px;
   text-decoration: none;
   font-weight: bold;
-}
-
-.song-details a:hover {
-  text-decoration: underline;
 }
 
 .banner {
@@ -202,7 +188,6 @@ input::placeholder {
 }
 
 .banner .song-details a {
-  color: #31135f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -217,7 +202,6 @@ input::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,6 +225,33 @@ input::placeholder {
   cursor: pointer;
 }
 
+@media (min-width: 2000px) {
+  .container {
+    .search-section {
+      .input-container i {
+        position: absolute;
+        left: 9%;
+
+      }
+
+      .input-container .clear-btn {
+        position: absolute;
+        right: 10%;
+      }
+
+      .input-container input {
+        width: 80%;
+      }
+    }
+  }
+
+  .button {
+    button {
+      width: 300px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .container {
     padding: 0;
@@ -262,6 +273,16 @@ input::placeholder {
 
     .clear-btn {
       right: 35px !important;
+    }
+  }
+
+  .song-card {
+    width: 50%;
+    height: 50%;
+    border: 1px solid;
+
+    img {
+      width: 50vw;
     }
   }
 }
@@ -289,4 +310,6 @@ input::placeholder {
       right: 50px !important;
     }
   }
+
+
 }

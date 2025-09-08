@@ -197,3 +197,19 @@ footer {
     color: var(--cor-secundaria);
   }
 }
+
+
+@media (min-width: 2200px) {
+  h2 {
+    font-size: 32px !important;
+  }
+
+  p,
+  .wellcome {
+    font-size: 26px !important;
+  }
+
+  .wellcome span {
+    line-height: 60px;
+  }
+}

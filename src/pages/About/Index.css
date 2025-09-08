@@ -3,16 +3,10 @@
     font-size: 25px;
   }
 
-  h2,
-  p {
-    color: #31135f;
-  }
-
   .description {
     width: 80%;
     margin: auto;
     text-align: center;
-    color: #31135f;
   }
 
   .profile {
@@ -25,26 +19,24 @@
 
     .picture {
       width: 150px;
-      height: 150px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 100px;
+      margin: 100px 0;
 
       img {
-        width: 100%;
+        width: 10vw;
         border-radius: 50%;
       }
 
       p {
-        color: #31135f;
         font-weight: bold;
         text-align: center;
       }
 
       a {
         text-decoration: none;
-        color: #F2D43D;
         font-weight: bold;
         cursor: pointer;
       }
@@ -89,6 +81,28 @@
     cursor: pointer;
   }
 
+  @media (min-width: 2200px) {
+    h2 {
+      font-size: 32px !important;
+    }
+
+    p {
+      font-size: 26px !important;
+    }
+
+    .profile {
+      height: 30vh;
+
+      .picture {
+        width: 25vw;
+
+        img {
+          width: 8vw;
+        }
+      }
+    }
+  }
+
   @media (max-width: 800px) {
     .profile-content {
       position: relative;
@@ -96,16 +110,26 @@
       height: 80%;
       font-size: 16px;
     }
-  }
 
-  @media (max-width: 456px) {
     .profile {
+      width: 100%;
       display: flex;
       gap: 30px;
 
       .picture {
-        width: 100px;
-        height: 100px;
+        width: 15vw;
+      }
+    }
+  }
+
+  @media (max-width: 456px) {
+    .profile {
+      width: 100%;
+      display: flex;
+      gap: 30px;
+
+      .picture {
+        width: 20vw;
       }
     }
 

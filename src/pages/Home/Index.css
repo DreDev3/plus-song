@@ -3,6 +3,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
 
   .wellcome {
     width: 80%;
@@ -18,34 +19,27 @@ main {
   .partion {
     width: 50vw;
     height: 5px;
-    margin-top: 30px;
+    margin: 30px 0;
   }
 
   .sugestions {
-    width: 80%;
+    margin: 40px auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    text-align: left;
     display: flex;
     align-items: center;
   }
 
-  h3 {
-    width: 50%;
-
-    img {
-      width: 100%;
-      border-radius: 50%;
-    }
+  img {
+    width: 15vw;
+    border-radius: 50%;
   }
 }
 
-.sugestions {
-  margin: 40px auto;
-  max-width: 900px;
-  text-align: left;
-}
-
 .dev-box {
-  width: 100%;
-  height: 400px;
+  width: 30vw;
+  min-height: 30vh;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -55,7 +49,6 @@ main {
 
 .dev-box ol {
   list-style-type: none;
-  height: 100%;
 
   li {
     margin: 10px 0;
@@ -78,21 +71,14 @@ main {
   text-decoration: underline;
 }
 
-@media (min-width: 1500px) {
-  .dev-box {
-    height: 220px;
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
   .sugestions {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .dev-box {
     width: 45vw;
-    margin-top: 40px;
 
     h3 {
       width: 40%;
@@ -112,7 +98,8 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -182,6 +169,22 @@ main {
       font-size: 12px;
     }
   }
+
+  ol {
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  li {
+    font-size: 11px;
+  }
+
 }
 
 @media (max-width: 467px) {
