@@ -24,7 +24,7 @@ export default function About() {
         <section class="profile">
           <div class="picture">
             <img src={`${import.meta.env.BASE_URL}André.png`} alt="André" />
-            <p>Edson André dos Santos</p>
+            <p>Edson André Santos Gomes</p>
             <a
               onClick={() => setProfileId(profileDescription.edson)}
               target='_blank'
