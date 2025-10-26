@@ -9,18 +9,13 @@
     font-size: 25px;
   }
 
-  h2,
-  p {
-    color: #31135f;
-  }
-
-
   .cards {
     width: 80%;
     height: 200px;
     margin: 50px auto;
     display: flex;
     justify-content: space-around;
+    transition: 0.5s ease-out;
 
     .social {
       max-width: 100%;
@@ -50,9 +45,24 @@
     }
   }
 
+  @media (max-width: 900px) {
+    .cards {
+      width: 90vw;
+
+      .social {
+        max-width: 100%;
+
+        img {
+          width: 95%;
+          height: 90%;
+        }
+      }
+    }
+  }
+
   @media (max-width: 720px) {
     .cards {
-      width: 80%;
+      width: 90vw;
       height: 100px;
 
       .social {
@@ -61,6 +71,21 @@
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .cards {
+      width: 90vw;
+
+      .social {
+        max-width: 100%;
+
+        img {
+          width: 90%;
+          height: 80%;
         }
       }
     }
