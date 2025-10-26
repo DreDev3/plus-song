@@ -54,10 +54,10 @@ export default function About() {
         {/* Modal Perfil */}
         {profileId && (
           <div className="profile-modal">
-            <a className="close" onClick={() => setProfileId(null)}>
-              &times;
-            </a>
             <div className="profile-content">
+              <a className="close" onClick={() => setProfileId(null)}>
+                &times;
+              </a>
 
               {/* Conteúdo do perfil */}
               <h2>{profileId}</h2>

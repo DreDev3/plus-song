@@ -122,7 +122,8 @@ main {
 }
 
 .profile-modal .close {
-  color: #f5f6fa;
+  background: var(--cor-tercearia);
+  color: var(--cor-secundaria);
 }
 
 .container {

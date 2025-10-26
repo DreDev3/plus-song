@@ -63,9 +63,9 @@
 
   .profile-content {
     position: relative;
-    width: 45cqh;
-    height: 60%;
-    padding: 50px;
+    width: 55cqh;
+    height: 70%;
+    padding: 20px;
     border-radius: 30px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -76,11 +76,14 @@
   }
 
   .profile-modal .close {
-    position: absolute;
-    transform: translateX(850%) translateY(-520%);
+    position: fixed;
+    width: 55cqh;
+    padding: 0 20px 0 20px;
+    border-radius: 30px 30px 0 0;
+    transform: translateX(-50%) translateY(-50%);
     font-size: 30px;
+    text-align: right;
     cursor: pointer;
-    z-index: 10;
   }
 
   @media (min-width: 2200px) {
@@ -121,7 +124,8 @@
 
   @media (max-width: 800px) {
     .profile-modal .close {
-      transform: translateX(35vw) translateY(-470%);
+      width: 60%;
+      transform: translateX(-50%) translateY(-48%);
     }
 
     .profile-content {

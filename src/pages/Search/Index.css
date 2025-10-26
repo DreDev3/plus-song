@@ -41,6 +41,7 @@
       border-radius: 10px;
       outline: none;
       font-family: 'Poppins', sans-serif;
+      font-size: 16px;
     }
 
     .input-container .clear-btn {
@@ -277,7 +278,7 @@ input::placeholder {
     }
 
     .clear-btn {
-      right: 35px !important;
+      right: 40px !important;
     }
   }
 
@@ -304,6 +305,7 @@ input::placeholder {
 
     .input-container i {
       opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
 
     .input-container.focused i {
@@ -312,6 +314,7 @@ input::placeholder {
 
     .input-container input {
       width: 90% !important;
+      font-size: 12px;
     }
 
     input::placeholder {
