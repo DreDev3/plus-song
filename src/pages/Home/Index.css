@@ -33,7 +33,7 @@ main {
 
   h3 {
     img {
-      width: 15vw;
+      width: 15cqw;
       border-radius: 50%;
     }
 
@@ -43,26 +43,20 @@ main {
 .dev-box {
   width: 30vw;
   min-height: 30vh;
-  margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
 }
 
 .dev-box ol {
   list-style-type: none;
+  transform: translateY(-10%);
 
   li {
     margin: 10px 0;
+    transform: translateX(-30%);
   }
-}
-
-.dev-box li::marker {
-  margin: 6px 0;
-  content: counter(list-item) " - ";
-  font-weight: 700;
-
 }
 
 .dev-box a {
@@ -101,7 +95,6 @@ main {
 
     .list {
       width: 80%;
-      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -135,10 +128,8 @@ main {
 
     .list {
       width: 80%;
-      padding: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
     }
@@ -169,8 +160,6 @@ main {
 
   .dev-box {
     width: 70vw;
-    height: 100vh;
-    margin-top: 200px;
 
     h3 {
       width: 50%;
@@ -199,7 +188,6 @@ main {
   }
 
   .dev-box {
-    height: 300px;
     margin: 10px;
 
     h4 {
@@ -211,12 +199,6 @@ main {
     }
   }
 
-  ol {
-    width: 100%;
-    position: relative;
-    bottom: 20px;
-    right: 20px;
-  }
 
   h4 {
     font-size: 12px;
@@ -237,9 +219,6 @@ main {
   }
 
   .dev-box {
-    height: 300px;
-    margin: 10px;
-
     h3 {
       width: 80%;
 
@@ -254,9 +233,6 @@ main {
 
     ol {
       width: 100%;
-      position: relative;
-      bottom: 20px;
-      right: 20px;
     }
 
     h4 {

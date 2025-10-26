@@ -121,8 +121,8 @@ main {
   color: var(--cor-secundaria);
 }
 
-.profile-content .close {
-  color: var(--cor-secundaria);
+.profile-modal .close {
+  color: #f5f6fa;
 }
 
 .container {
@@ -162,6 +162,10 @@ main {
 .banner {
   background-color: var(--cor-primaria);
   color: var(--cor-primaria);
+}
+
+body.daltonismo .banner {
+  border: 1px solid var(--cor-destaque);
 }
 
 .banner .song-details a {

@@ -102,7 +102,7 @@ export default function TopSuccess() {
       </main>
       <TopPage />
       {videoId && (
-        <div className="video-modal" onClick={() => setVideoId(null)}>
+        <div className="video-modal">
           <div className="video-content">
             <a className="close" onClick={() => setVideoId(null)}>
               &times;

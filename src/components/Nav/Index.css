@@ -47,7 +47,7 @@ nav a:hover {
   display: none;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 787px) {
 
   nav a {
     font-size: 12px;

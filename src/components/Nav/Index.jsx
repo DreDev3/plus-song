@@ -22,7 +22,7 @@ export default function Nav() {
       </a>
       <nav className={isShort ? "open" : ""} >
         <NavLink to="/plus-song" onClick={() => setIsShort(false)}>Home</NavLink>
-        <NavLink to="/search" onClick={() => setIsShort(false)}>Buscar músicas</NavLink>
+        <NavLink to="/search" onClick={() => setIsShort(false)}>Buscar Músicas</NavLink>
         <NavLink to="/top-success" onClick={() => setIsShort(false)}>Top Sucessos</NavLink>
         <NavLink to="/contact" onClick={() => setIsShort(false)}>Contatos</NavLink>
         <NavLink to="/about" onClick={() => setIsShort(false)}>Sobre Nós</NavLink>

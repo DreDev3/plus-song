@@ -17,6 +17,7 @@ export default function Search() {
   const [banner, setBanner] = useState([]);
   const [videoId, setVideoId] = useState(null);
   const { isOn } = useStatusColor();
+  const [searchOn, setSearchOn] = useState();
 
   // Buscar vídeos por artista
   async function fetchTopVideos(name) {
@@ -114,7 +115,7 @@ export default function Search() {
       <main className="container">
         <section className="search-section">
           <h2>Buscar por artista ou banda</h2>
-          <div className="input-container">
+          <div className={`input-container ${searchOn ? 'focused' : ''}`}>
             <i className="fa-solid fa-magnifying-glass"></i>
             <input
               type="text"
@@ -122,6 +123,8 @@ export default function Search() {
               value={artistName}
               onChange={(e) => setArtistName(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') fetchTopVideos(artistName) }}
+              onFocus={() => setSearchOn(true)}
+              onBlur={() => setSearchOn(false)}
             />
             <button className="clear-btn" onClick={() => setArtistName("")}>
               <i className="fa-solid fa-xmark"></i>
@@ -231,7 +234,7 @@ export default function Search() {
       {/* Modal vídeo */}
       {
         videoId && (
-          <div className="video-modal" onClick={() => setVideoId(null)}>
+          <div className="video-modal">
             <div className="video-content">
               <a className="close" onClick={() => setVideoId(null)}>
                 &times;
