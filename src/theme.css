@@ -184,6 +184,11 @@ body.daltonismo .banner {
 
   a {
     color: var(--cor-destaque);
+    transition: 0.3s ease-out;
+
+    &:hover {
+      color: var(--cor-secundaria);
+    }
   }
 
   img {
